@@ -16,4 +16,4 @@ use Illuminate\Http\Request;
 | contains the "admin" middleware group. Now create something great!
 |
 */
-Route::get('/', [AdminController::class, 'index']);
+Route::get('/', [AdminController::class, 'index'])->name('admin');
