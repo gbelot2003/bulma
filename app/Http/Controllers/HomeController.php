@@ -27,6 +27,7 @@ class HomeController extends Controller
         if (Auth::user() && Auth::user()->is_admin) {
             return redirect()->route('admin');
         }
+
         return view('home');
     }
 }
