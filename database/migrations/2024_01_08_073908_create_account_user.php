@@ -13,7 +13,7 @@ return new class extends Migration {
         Schema::create('account_user', function (Blueprint $table) {
             $table->unsignedBigInteger('account_id')->index();
             $table->unsignedBigInteger('user_id')->index();
-            $table->unsignedBigInteger('type_user');
+            $table->unsignedBigInteger('rol_user');
 
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('account_id')->references('id')->on('accounts');

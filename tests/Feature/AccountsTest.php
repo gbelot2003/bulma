@@ -31,7 +31,7 @@ class AccountsTest extends TestCase
             1 => [
                 'user_id' => $testUser->id,
                 'account_id' => $account->id,
-                'type_user' => 1,
+                'rol_user' => 1,
             ]
         ];
 
@@ -63,12 +63,12 @@ class AccountsTest extends TestCase
             1 => [
                 'user_id' => $testUser->id,
                 'account_id' => $account->id,
-                'type_user' => 1,
+                'rol_user' => 1,
             ],
             2 => [
                 'user_id' => $test2User->id,
                 'account_id' => $account->id,
-                'type_user' => 2,
+                'rol_user' => 2,
             ]
         ];
 
@@ -77,7 +77,7 @@ class AccountsTest extends TestCase
         $this->assertDatabaseHas('account_user', [
             'account_id' => $account->id,
             'user_id' => $test2User->id,
-            'type_user' => 2,
+            'rol_user' => 2,
         ]);
     }
 }
