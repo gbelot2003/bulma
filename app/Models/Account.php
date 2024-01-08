@@ -16,8 +16,26 @@ class Account extends Model
         'account_type' => AccountType::class
     ];
 
+    /**
+     * Relacion con Usuers
+     *
+     */
     public function users()
     {
         return $this->belongsToMany(User::class);
+    }
+
+    /**
+     * Relacion con Persona Natural
+     *
+     */
+    public function naturalPerson()
+    {
+        return $this->hasOne(Naturalperson::class);
+    }
+
+    public function legalPerson()
+    {
+        return $this->hasOne(Legalperson::class);
     }
 }

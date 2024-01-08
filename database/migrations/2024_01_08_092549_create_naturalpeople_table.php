@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('naturalpeople', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('account_id');
+            $table->string('firstName');
+            $table->string('lastName');
+            $table->integer('ID_number');
             $table->timestamps();
+
+            $table->foreign('account_id')->references('id')->on('accounts')
+            ->onDelete('cascade');
         });
     }
 
