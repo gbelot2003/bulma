@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Account extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['document_number', 'name'];
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
+    }
 }

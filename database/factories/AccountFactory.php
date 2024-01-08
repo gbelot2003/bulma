@@ -17,7 +17,8 @@ class AccountFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'document_number' => fake()->randomNumber(7, true),
+            'name' => fake()->name
         ];
     }
 }
