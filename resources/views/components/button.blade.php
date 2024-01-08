@@ -1,3 +1,3 @@
 <div>
-    <h1>Tester</h1>
+    <a href="/admin" class="btn btn-success">Admin</a>
 </div>
