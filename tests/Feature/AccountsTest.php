@@ -37,6 +37,7 @@ class AccountsTest extends TestCase
 
         $account->users()->sync($data);
 
+        // La cuenta se creo
         $this->assertDatabaseHas('accounts', [
             'document_number' => $account->document_number,
             'name' => $account->name
@@ -59,6 +60,7 @@ class AccountsTest extends TestCase
         $te = new Account();
         $account = $te->factory()->createOne();
 
+        // Formulamos el array de usuarios
         $data = [
             1 => [
                 'user_id' => $testUser->id,
@@ -80,4 +82,6 @@ class AccountsTest extends TestCase
             'rol_user' => 2,
         ]);
     }
+
+    // Testeando tipo de cuenta
 }
