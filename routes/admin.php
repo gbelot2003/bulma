@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Routing\Router;
@@ -15,6 +16,4 @@ use Illuminate\Http\Request;
 | contains the "admin" middleware group. Now create something great!
 |
 */
-Route::get('/', function() {
-    print('I am an admin');
-});
+Route::get('/', [AdminController::class, 'index']);
