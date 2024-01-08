@@ -1,10 +1,8 @@
 <?php
 
+use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Routing\Router;
-use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +15,5 @@ use Illuminate\Http\Request;
 |
 */
 Route::get('/', [AdminController::class, 'index'])->name('admin');
+
+Route::get('/users', [UserController::class, 'index'])->name('users.index');

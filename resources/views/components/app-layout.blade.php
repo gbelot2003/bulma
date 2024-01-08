@@ -76,7 +76,7 @@
                             data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="#">{{ __('Vinculations') }}</a>
-                                <a class="nav-link" href="#">{{ __('Users Administration') }}</a>
+                                <a class="nav-link" href="{{ route('users.index') }}">{{ __('Users Administration') }}</a>
 
                             </nav>
                         </div>
