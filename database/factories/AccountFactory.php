@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\AccountType;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,7 +19,17 @@ class AccountFactory extends Factory
     {
         return [
             'document_number' => fake()->randomNumber(7, true),
-            'name' => fake()->name
+            'name' => fake()->name,
+            'account_type' => AccountType::JURIDICA,
         ];
+    }
+
+    public function natural(): Factory
+    {
+        return $this->states(function (array $attributes) {
+            return [
+                'account_type' => AccountType::NATURAL
+            ];
+        });
     }
 }

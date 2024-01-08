@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('document_number');
             $table->string('name');
+            $table->integer('account_type')->unsigned();
             $table->timestamps();
         });
     }

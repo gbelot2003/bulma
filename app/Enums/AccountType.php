@@ -1,8 +1,8 @@
 <?php
 namespace App\Enums;
 
-enum AccountType: string
+enum AccountType: int
 {
-    case JURIDICA = 'Persona Juridica';
-    case NATURAL = 'Persona Natural';
+    case JURIDICA = 1;
+    case NATURAL = 2;
 }
