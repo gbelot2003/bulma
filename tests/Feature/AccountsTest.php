@@ -84,4 +84,9 @@ class AccountsTest extends TestCase
     }
 
     // Testeando tipo de cuenta
+
+    public function an_ccount_can_be_natural()
+    {
+
+    }
 }

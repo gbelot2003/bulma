@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Account;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,10 @@ class NaturalpersonFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'account_id' => fake()->randomElement(Account::all())['id'],
+            'firstName' => fake()->firstName,
+            'lastName' => fake()->lastName,
+            'ID_number' => fake()->randomNumber(13, true)
         ];
     }
 }
