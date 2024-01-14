@@ -13,6 +13,4 @@ class AccountUser extends Model
 
     protected $table = 'account_user';
 
-
-
 }

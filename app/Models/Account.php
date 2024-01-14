@@ -34,6 +34,10 @@ class Account extends Model
         return $this->hasOne(Naturalperson::class);
     }
 
+    /**
+     * Relacion Persona Juridica
+     *
+     */
     public function legalPerson()
     {
         return $this->hasOne(Legalperson::class);
